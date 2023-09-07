@@ -1,0 +1,270 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+            }
+            .page-header {
+                width: 100%;
+                padding: 0px;
+                margin: 0px;
+                padding-top: .25rem;
+                padding-bottom: .25rem;
+                display: flex;
+                flex-direction: row;
+            }
+            .hidden {
+                display: none;
+            }
+            .header-waves {
+                position:relative;
+                text-align:center;
+                background: linear-gradient(60deg, rgba(0,0,66,1) 0%, rgba(18,120,177,1) 50%);
+                color:white;
+            }
+            .ocean .header-waves {
+                background: linear-gradient(90deg, rgba(18,120,177,1) 0%, rgba(0,0,66,1) 20%);
+            }
+            .dark .page-header {
+                background: linear-gradient(60deg, rgba(0,0,66,1) 0%, rgba(18,120,177,1) 50%);
+            }
+            .ocean .page-header {
+                background: #ffffff;
+            }
+            .page-logo {
+                background-image: url("images/header-logo.svg");
+                background-size: contain;
+                background-repeat: no-repeat;
+                min-width: 15rem;
+                flex-grow: 1;
+            }
+            .dark .page-logo {
+                background-image: url("images/header-logo-dark.svg");
+            }
+            .ocean .page-logo {
+                background-image: url("images/header-logo.svg");
+            }
+            .social-right {
+                display: flex;
+                justify-content: flex-end;
+                padding-right: .75rem;
+            }
+            .social-button {
+                height: 2rem;
+                width: 2rem;
+                cursor: pointer;
+                margin: .75rem .5rem .25rem 0;
+                position: relative;
+            }
+            .social-button > a {
+                height: 100%;
+                width: 100%;
+                display: block;
+            }
+            .social-button:hover {
+                box-shadow: .125rem .125rem .5rem rgba(0,0,0,.5);
+            }
+            .social-facebook {
+                background-image: url("images/social-facebook.svg");
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+            .social-facebook:hover {
+                background-image: url("images/social-facebook-h.svg");
+            }
+            .social-instagram {
+                background-image: url("images/social-instagram.svg");
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+            .social-instagram:hover {
+                background-image: url("images/social-instagram-h.svg");
+
+            }
+            .social-in {
+                background-image: url("images/social-in.svg");
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+            .social-in:hover {
+                background-image: url("images/social-in-h.svg");
+            }
+            .social-google {
+                background-image: url("images/social-google.svg");
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+            .social-google:hover {
+                background-image: url("images/social-google-h.svg");
+            }
+            .page-body {
+                margin: 0;
+                padding: 0 1.5rem 1.5rem 1.5rem;
+                background: linear-gradient(rgba(28, 158, 215, 0.2), rgba(28, 158, 215, 0));
+                background-size: auto 3rem;
+                background-repeat: no-repeat;
+                flex-grow: 1;
+                position: relative;
+                overflow-y: auto;
+            }
+            .dark .page-body {
+                background: #ffffff;
+            }
+            .ocean .page-body {
+                background: linear-gradient(90deg, rgba(18,120,177,1) 0%, rgba(0,0,66,1) 20%);
+                color: #ffffff;
+            }
+            .phone-display {
+                cursor: pointer;
+                margin-right: 1.75rem;
+                margin-top: 1rem;
+            }
+            .phone-display > a {
+                font-size: 1.5rem;
+                font-family: 'Futura, Arial';
+                font-weight: 600;
+                color: rgba(255,255,255,.75);
+                text-decoration: none;
+            }
+            .phone-display > a:hover {
+                text-shadow: .125rem .125rem .5rem rgba(0,0,0,.25);
+                color: #ffffff;
+            }
+            .ocean .phone-display > a, .ocean .phone-display > a:hover {
+                color: rgba(18,120,177,1);
+            }
+            @media only screen and (max-width: 620px){
+                body {
+                    height: auto;
+                }
+                .page-header {
+                    flex-direction: column;
+                }
+                .page-logo {
+                    justify-content: center;
+                    background-image: url("images/header-logo-v.svg");
+                    background-position-x: center;
+                    min-width: 80%;
+                    height: 8em;
+                }
+                .dark .page-logo {
+                    background-image: url("images/header-logo-dark-v.svg");
+                }
+                .social-right {
+                    justify-content: center;
+                    padding-right: 0;
+                    padding-left: .75rem
+                }
+                .phone-display {
+                    display: flex;
+                    justify-content: center;
+                    margin: 0;
+                }
+                .page-body {
+                    overflow-y: visible;
+                }
+                .header-waves {
+                    background: linear-gradient(90deg, rgba(0,0,66,1) 0%, rgba(18,120,177,1) 50%);
+                }
+                .dark .page-header {
+                    background: linear-gradient(90deg, rgba(0,0,66,1) 0%, rgba(18,120,177,1) 50%);
+                }
+            }
+            .message-center {
+                width: 100%;
+                text-align: center;
+            }
+            .message-center > h1 {
+                font-weight: bold;
+                text-transform: uppercase;
+                font-size: 3rem;
+                color: rgba(0,0,0,.25);
+            }
+            .text-emphasis {
+                color: rgba(18,120,177,1);
+                font-weight: bold;
+                text-transform: uppercase;
+            }
+            /* Waves */
+            .waves {
+                position:relative;
+                width: 100%;
+                height:5vh;
+                margin-bottom:-7px; /*Fix for safari gap*/
+                min-height:2vh;
+                max-height:5vh;
+            }
+            .ocean .waves {
+                transform: scaleY(-1);
+                filter: FlipV;
+            }
+            /* Animation */
+            .parallax > use {
+                animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
+            }
+            .parallax > use:nth-child(1) {
+                animation-delay: -2s;
+                animation-duration: 7s;
+            }
+            .parallax > use:nth-child(2) {
+                animation-delay: -3s;
+                animation-duration: 10s;
+            }
+            .parallax > use:nth-child(3) {
+                animation-delay: -4s;
+                animation-duration: 13s;
+            }
+            .parallax > use:nth-child(4) {
+                animation-delay: -5s;
+                animation-duration: 20s;
+            }
+            @keyframes move-forever {
+                0% {
+                transform: translate3d(-90px,0,0);
+                }
+                100% { 
+                    transform: translate3d(85px,0,0);
+                }
+            }
+        </style>
+    </head>
+    <body class="dark">
+        <section class="page-header page-header">
+            <div class="page-logo page-logo"></div>
+            <div class="phone-display"><a href="tel:916-303-6726">(916) 303-6726</a></div>
+            <div class="social-right">
+                <div class="social-button social-facebook hidden"><a href="https://www.facebook.com" target="_blank" rel="noopener"></a></div>
+                <div class="social-button social-instagram"><a href="https://www.instagram.com/hightidewashingllc/" target="_blank" rel="noopener"></a></div>
+                <div class="social-button social-in hidden"><a href="https://www.linkedin.com" target="_blank" rel="noopener"></a></div>
+                <div class="social-button social-google hidden"><a href="https://www.google.com" target="_blank" rel="noopener"></a></div>
+            </div>
+        </section>
+        <div class="header-waves">
+            <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                <defs>
+                    <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                </defs>
+                <g class="parallax">
+                    <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7)" />
+                    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+                    <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+                    <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+                </g>
+            </svg>
+        </div>
+        <section class="page-body">
+            <div class="message-center">
+                <h1>Coming Soon</h1>
+                <p>Web hosting is hard. We are <strong class="text-emphasis">way better</strong> at washing stuff!</p>
+                <p>While we are still getting set up, please checkout out our instagram page</p>
+                <p><a href="https://www.instagram.com/hightidewashingllc/" target="_blank" rel="noopener">www.instagram.com/hightidewashingllc/</a></p>
+                <p>Or give us a call at <a href="tel:916-303-6726">(916) 303-6726</a></p>
+            </div>
+        </section>
+    </body>
+</html>
