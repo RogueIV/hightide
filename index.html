@@ -24,17 +24,11 @@
             .header-waves {
                 position:relative;
                 text-align:center;
-                background: linear-gradient(60deg, rgba(0,0,66,1) 0%, rgba(18,120,177,1) 50%);
+                background: linear-gradient(90deg, rgba(0,0,66,1) 0%, rgba(18,120,177,1) 50%);
                 color:white;
             }
-            .ocean .header-waves {
-                background: linear-gradient(90deg, rgba(18,120,177,1) 0%, rgba(0,0,66,1) 20%);
-            }
             .dark .page-header {
-                background: linear-gradient(60deg, rgba(0,0,66,1) 0%, rgba(18,120,177,1) 50%);
-            }
-            .ocean .page-header {
-                background: #ffffff;
+                background: linear-gradient(90deg, rgba(0,0,66,1) 0%, rgba(18,120,177,1) 50%);
             }
             .page-logo {
                 background-image: url("images/header-logo.svg");
@@ -45,9 +39,6 @@
             }
             .dark .page-logo {
                 background-image: url("images/header-logo-dark.svg");
-            }
-            .ocean .page-logo {
-                background-image: url("images/header-logo.svg");
             }
             .social-right {
                 display: flex;
@@ -115,10 +106,6 @@
             .dark .page-body {
                 background: #ffffff;
             }
-            .ocean .page-body {
-                background: linear-gradient(90deg, rgba(18,120,177,1) 0%, rgba(0,0,66,1) 20%);
-                color: #ffffff;
-            }
             .phone-display {
                 cursor: pointer;
                 margin-right: 1.75rem;
@@ -135,9 +122,59 @@
                 text-shadow: .125rem .125rem .5rem rgba(0,0,0,.25);
                 color: #ffffff;
             }
-            .ocean .phone-display > a, .ocean .phone-display > a:hover {
-                color: rgba(18,120,177,1);
+            .message-center {
+                width: 100%;
+                text-align: center;
             }
+            .message-center > h1 {
+                font-weight: bold;
+                text-transform: uppercase;
+                font-size: 3rem;
+                color: rgba(0,0,0,.25);
+            }
+            .text-emphasis {
+                color: rgba(18,120,177,1);
+                font-weight: bold;
+                text-transform: uppercase;
+            }
+
+            /* Waves */
+            .waves {
+                position:relative;
+                width: 100%;
+                height: 2.5rem;
+                margin-bottom:-7px; /*Fix for safari gap*/
+            }
+
+            /* Animation */
+            .parallax > use {
+                animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
+            }
+            .parallax > use:nth-child(1) {
+                animation-delay: -2s;
+                animation-duration: 7s;
+            }
+            .parallax > use:nth-child(2) {
+                animation-delay: -3s;
+                animation-duration: 10s;
+            }
+            .parallax > use:nth-child(3) {
+                animation-delay: -4s;
+                animation-duration: 13s;
+            }
+            .parallax > use:nth-child(4) {
+                animation-delay: -5s;
+                animation-duration: 20s;
+            }
+            @keyframes move-forever {
+                0% {
+                transform: translate3d(-90px,0,0);
+                }
+                100% { 
+                    transform: translate3d(85px,0,0);
+                }
+            }
+
             @media only screen and (max-width: 620px){
                 body {
                     height: auto;
@@ -174,61 +211,8 @@
                 .dark .page-header {
                     background: linear-gradient(90deg, rgba(0,0,66,1) 0%, rgba(18,120,177,1) 50%);
                 }
-            }
-            .message-center {
-                width: 100%;
-                text-align: center;
-            }
-            .message-center > h1 {
-                font-weight: bold;
-                text-transform: uppercase;
-                font-size: 3rem;
-                color: rgba(0,0,0,.25);
-            }
-            .text-emphasis {
-                color: rgba(18,120,177,1);
-                font-weight: bold;
-                text-transform: uppercase;
-            }
-            /* Waves */
-            .waves {
-                position:relative;
-                width: 100%;
-                height:5vh;
-                margin-bottom:-7px; /*Fix for safari gap*/
-                min-height:2vh;
-                max-height:5vh;
-            }
-            .ocean .waves {
-                transform: scaleY(-1);
-                filter: FlipV;
-            }
-            /* Animation */
-            .parallax > use {
-                animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
-            }
-            .parallax > use:nth-child(1) {
-                animation-delay: -2s;
-                animation-duration: 7s;
-            }
-            .parallax > use:nth-child(2) {
-                animation-delay: -3s;
-                animation-duration: 10s;
-            }
-            .parallax > use:nth-child(3) {
-                animation-delay: -4s;
-                animation-duration: 13s;
-            }
-            .parallax > use:nth-child(4) {
-                animation-delay: -5s;
-                animation-duration: 20s;
-            }
-            @keyframes move-forever {
-                0% {
-                transform: translate3d(-90px,0,0);
-                }
-                100% { 
-                    transform: translate3d(85px,0,0);
+                .parallax > use {
+                    animation: move-forever 15s cubic-bezier(.55,.5,.45,.5)     infinite;
                 }
             }
         </style>
@@ -260,7 +244,7 @@
         <section class="page-body">
             <div class="message-center">
                 <h1>Coming Soon</h1>
-                <p>Web hosting is hard. We are <strong class="text-emphasis">way better</strong> at washing stuff!</p>
+                <p>Web marketing is hard. We are <strong class="text-emphasis">way better</strong> at washing stuff!</p>
                 <p>While we are still getting set up, please checkout out our instagram page</p>
                 <p><a href="https://www.instagram.com/hightidewashingllc/" target="_blank" rel="noopener">www.instagram.com/hightidewashingllc/</a></p>
                 <p>Or give us a call at <a href="tel:916-303-6726">(916) 303-6726</a></p>
