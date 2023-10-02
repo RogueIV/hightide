@@ -1,0 +1,131 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.page-header {
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    padding-top: .25rem;
+    padding-bottom: .25rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.header-waves {
+    position:relative;
+    text-align:center;
+    background: linear-gradient(90deg, rgba(0,0,66,1) 0%, rgba(18,120,177,1) 50%);
+    color:white;
+}
+
+.page-header {
+    background: linear-gradient(90deg, rgba(0,0,66,1) 0%, rgba(18,120,177,1) 50%);
+}
+
+.page-logo {
+    background-image: url("../images/header-logo-dark.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    min-width: 15rem;
+    flex-grow: 1;
+    margin-top: -.5rem;
+}
+
+.page-body {
+    margin: 0;
+    padding: 0 1.5rem 1.5rem 1.5rem;
+    background: #ffffff;
+    background-size: auto 3rem;
+    background-repeat: no-repeat;
+    flex-grow: 1;
+    position: relative;
+    overflow-y: auto;
+}
+
+.page-contact {
+    padding: .5rem 2rem;
+    background: #000000;
+    display: flex;
+    flex-direction: row;
+}
+
+.menu-right{
+    padding-right: 2rem;
+    justify-content: flex-end;
+    height: 2.75rem;
+    line-height: 2.75rem;
+}
+.menu-right__list {
+    list-style: none;
+    padding: 0;
+    white-space: nowrap;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin: 0;
+}
+.menu-right__list > li > a {
+    text-align: right;
+    color: rgba(255,255,255,.75);
+    font-family: Arial, 'Myriad Pro';
+    font-size: 1rem;
+    text-decoration: none;
+    padding-left: 1.5rem;
+}
+.menu-right__list > li > a:hover {
+    color: #ffffff;
+}
+.menu-right .menu-right__toggle {
+    display: none;
+    margin: .5rem
+}
+.menu-right__toggle > div {
+    width: 1.5rem;
+    height: .25rem;
+    background: rgba(255,255,255,.75);
+    margin: .25rem 0;
+}
+.menu-right__toggle:hover > div {
+    background: #ffffff;
+}
+
+@media only screen and (max-width: 620px){
+    body {
+        height: auto;
+    }
+    .page-body {
+        overflow-y: visible;
+    }
+    .header-waves {
+        background: linear-gradient(90deg, rgba(0,0,66,1) 0%, rgba(18,120,177,1) 50%);
+    }
+    .page-header {
+        background: linear-gradient(90deg, rgba(0,0,66,1) 0%, rgba(18,120,177,1) 50%);
+    }
+}
+
+@media only screen and (max-width: 840px){
+    .menu-right .menu-right__list {
+        display: none;
+        position: absolute;
+        padding: 1rem;
+        padding-right: 2rem;
+        background: rgba(18,120,177,1);
+        z-index: 10;
+        right: 0;
+        text-align: right;
+        flex-direction: column;
+        border-radius: 0 0 0 2rem;
+    }
+    .menu-right--expanded .menu-right__list {
+        display: block;
+    }
+    .menu-right .menu-right__toggle {
+        display: block;
+    }
+}
