@@ -93,8 +93,9 @@ section.row:not(:first-child) {
     background-image: url("../images/photos/lites-after.jpg");
     background-size: cover;
     background-position-x: left;
+    background-position-y: center;
     background-repeat: no-repeat;
-    min-width: 50%;
+    min-width: 70%;
     min-height: 30rem;
 }
 .section-image--pressure {
