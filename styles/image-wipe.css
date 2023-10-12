@@ -1,0 +1,20 @@
+#deck-canvas {
+    background: url('../images/photos/deck-before.jpg'); 
+    background-size: contain;
+}
+#roof-canvas {
+    background: url('../images/photos/roof-before.jpg'); 
+    background-size: cover;
+}
+#stairs-canvas {
+    background: url('../images/photos/stairs-before.jpg'); 
+    background-size: cover;
+}
+#awning-canvas {
+    background: url('../images/photos/awning-before.jpg'); 
+    background-size: cover;
+}
+#sill-canvas {
+    background: url('../images/photos/sill-before.jpg'); 
+    background-size: contain;
+}

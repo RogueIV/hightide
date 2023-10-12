@@ -1,231 +1,37 @@
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
-        <style>
-            body {
-                margin: 0;
-                padding: 0;
-                display: flex;
-                flex-direction: column;
-                height: 100%;
-            }
-            .page-header {
-                width: 100%;
-                padding: 0px;
-                margin: 0px;
-                padding-top: .25rem;
-                padding-bottom: .25rem;
-                display: flex;
-                flex-direction: row;
-            }
-            .hidden {
-                display: none;
-            }
-            .header-waves {
-                position:relative;
-                text-align:center;
-                background: linear-gradient(90deg, rgba(0,0,66,1) 0%, rgba(18,120,177,1) 50%);
-                color:white;
-            }
-            .dark .page-header {
-                background: linear-gradient(90deg, rgba(0,0,66,1) 0%, rgba(18,120,177,1) 50%);
-            }
-            .page-logo {
-                background-image: url("images/header-logo.svg");
-                background-size: contain;
-                background-repeat: no-repeat;
-                min-width: 15rem;
-                flex-grow: 1;
-            }
-            .dark .page-logo {
-                background-image: url("images/header-logo-dark.svg");
-            }
-            .social-right {
-                display: flex;
-                justify-content: flex-end;
-                padding-right: .75rem;
-            }
-            .social-button {
-                height: 2rem;
-                width: 2rem;
-                cursor: pointer;
-                margin: .75rem .5rem .25rem 0;
-                position: relative;
-            }
-            .social-button > a {
-                height: 100%;
-                width: 100%;
-                display: block;
-            }
-            .social-button:hover {
-                box-shadow: .125rem .125rem .5rem rgba(0,0,0,.5);
-            }
-            .social-facebook {
-                background-image: url("images/social-facebook.svg");
-                background-size: contain;
-                background-repeat: no-repeat;
-            }
-            .social-facebook:hover {
-                background-image: url("images/social-facebook-h.svg");
-            }
-            .social-instagram {
-                background-image: url("images/social-instagram.svg");
-                background-size: contain;
-                background-repeat: no-repeat;
-            }
-            .social-instagram:hover {
-                background-image: url("images/social-instagram-h.svg");
-
-            }
-            .social-in {
-                background-image: url("images/social-in.svg");
-                background-size: contain;
-                background-repeat: no-repeat;
-            }
-            .social-in:hover {
-                background-image: url("images/social-in-h.svg");
-            }
-            .social-google {
-                background-image: url("images/social-google.svg");
-                background-size: contain;
-                background-repeat: no-repeat;
-            }
-            .social-google:hover {
-                background-image: url("images/social-google-h.svg");
-            }
-            .page-body {
-                margin: 0;
-                padding: 0 1.5rem 1.5rem 1.5rem;
-                background: linear-gradient(rgba(28, 158, 215, 0.2), rgba(28, 158, 215, 0));
-                background-size: auto 3rem;
-                background-repeat: no-repeat;
-                flex-grow: 1;
-                position: relative;
-                overflow-y: auto;
-            }
-            .dark .page-body {
-                background: #ffffff;
-            }
-            .phone-display {
-                cursor: pointer;
-                margin-right: 1.75rem;
-                margin-top: 1rem;
-            }
-            .phone-display > a {
-                font-size: 1.5rem;
-                font-family: 'Futura, Arial';
-                font-weight: 600;
-                color: rgba(255,255,255,.75);
-                text-decoration: none;
-            }
-            .phone-display > a:hover {
-                text-shadow: .125rem .125rem .5rem rgba(0,0,0,.25);
-                color: #ffffff;
-            }
-            .message-center {
-                width: 100%;
-                text-align: center;
-            }
-            .message-center > h1 {
-                font-weight: bold;
-                text-transform: uppercase;
-                font-size: 3rem;
-                color: rgba(0,0,0,.25);
-            }
-            .text-emphasis {
-                color: rgba(18,120,177,1);
-                font-weight: bold;
-                text-transform: uppercase;
-            }
-
-            /* Waves */
-            .waves {
-                position:relative;
-                width: 100%;
-                height: 2.5rem;
-                margin-bottom:-7px; /*Fix for safari gap*/
-            }
-
-            /* Animation */
-            .parallax > use {
-                animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
-            }
-            .parallax > use:nth-child(1) {
-                animation-delay: -2s;
-                animation-duration: 7s;
-            }
-            .parallax > use:nth-child(2) {
-                animation-delay: -3s;
-                animation-duration: 10s;
-            }
-            .parallax > use:nth-child(3) {
-                animation-delay: -4s;
-                animation-duration: 13s;
-            }
-            .parallax > use:nth-child(4) {
-                animation-delay: -5s;
-                animation-duration: 20s;
-            }
-            @keyframes move-forever {
-                0% {
-                transform: translate3d(-90px,0,0);
-                }
-                100% { 
-                    transform: translate3d(85px,0,0);
-                }
-            }
-
-            @media only screen and (max-width: 620px){
-                body {
-                    height: auto;
-                }
-                .page-header {
-                    flex-direction: column;
-                }
-                .page-logo {
-                    justify-content: center;
-                    background-image: url("images/header-logo-v.svg");
-                    background-position-x: center;
-                    min-width: 80%;
-                    height: 8em;
-                }
-                .dark .page-logo {
-                    background-image: url("images/header-logo-dark-v.svg");
-                }
-                .social-right {
-                    justify-content: center;
-                    padding-right: 0;
-                    padding-left: .75rem
-                }
-                .phone-display {
-                    display: flex;
-                    justify-content: center;
-                    margin: 0;
-                }
-                .page-body {
-                    overflow-y: visible;
-                }
-                .header-waves {
-                    background: linear-gradient(90deg, rgba(0,0,66,1) 0%, rgba(18,120,177,1) 50%);
-                }
-                .dark .page-header {
-                    background: linear-gradient(90deg, rgba(0,0,66,1) 0%, rgba(18,120,177,1) 50%);
-                }
-                .parallax > use {
-                    animation: move-forever 15s cubic-bezier(.55,.5,.45,.5)     infinite;
-                }
-            }
-        </style>
+        <link rel="stylesheet" href="styles/common.css">
+        <link rel="stylesheet" href="styles/layout.css">
+        <link rel="stylesheet" href="styles/social.css">
+        <link rel="stylesheet" href="styles/image-wipe.css">
+        <link rel="stylesheet" href="styles/waves.css">
     </head>
-    <body class="dark">
-        <section class="page-header page-header">
-            <div class="page-logo page-logo"></div>
-            <div class="phone-display"><a href="tel:916-303-6726">(916) 303-6726</a></div>
-            <div class="social-right">
+    <body>
+        <section class="page-contact">
+            <div class="social">
                 <div class="social-button social-facebook hidden"><a href="https://www.facebook.com" target="_blank" rel="noopener"></a></div>
                 <div class="social-button social-instagram"><a href="https://www.instagram.com/hightidewashingllc/" target="_blank" rel="noopener"></a></div>
                 <div class="social-button social-in hidden"><a href="https://www.linkedin.com" target="_blank" rel="noopener"></a></div>
                 <div class="social-button social-google hidden"><a href="https://www.google.com" target="_blank" rel="noopener"></a></div>
+                <div class="social-button social-email"><a href="mailto:hightidecleans@outlook.com" target="_blank" rel="noopener"></a></div>
+            </div>
+            <div class="phone-display"><a href="tel:916-303-6726">Call us: (916) 303-6726</a></div>
+        </section>
+        <section class="page-header">
+            <div class="page-logo"></div>
+            <div class="menu-right">
+                <div class="menu-right__toggle" onclick="toggleMenu()">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <ul id="menu-list" class="menu-right__list">
+                    <li><a href="#window-cleaning" onclick="toggleMenu()">Window cleaning</a></li>
+                    <li><a href="#pressure-washing" onclick="toggleMenu()">Pressure washing</a></li>
+                    <li><a href="#solar-panels" onclick="toggleMenu()">Solar panels</a></li>
+                    <li><a href="#roofs-gutters" onclick="toggleMenu()">Roofs and gutters</a></li>
+                </ul>
             </div>
         </section>
         <div class="header-waves">
@@ -242,13 +48,138 @@
             </svg>
         </div>
         <section class="page-body">
-            <div class="message-center">
+            <div class="message-coming-soon">
                 <h1>Coming Soon</h1>
                 <p>Web marketing is hard. We are <strong class="text-emphasis">way better</strong> at washing stuff!</p>
                 <p>While we are still getting set up, please checkout out our instagram page</p>
                 <p><a href="https://www.instagram.com/hightidewashingllc/" target="_blank" rel="noopener">www.instagram.com/hightidewashingllc/</a></p>
                 <p>Or give us a call at <a href="tel:916-303-6726">(916) 303-6726</a></p>
             </div>
+            <div class="flex-grow">
+                <section id="intro" class="row">
+                    <div class="section-image"></div>
+                    <div class="section-text">
+                        <div class="intro-title">Professional Exterior Cleaning</div>
+                        <div>
+                            <p>
+                                When it comes to maintaining the sparkling appearance of your home, professional cleaning services are a game-changer. 
+                                The benefits go beyond just enhancing the aesthetic appeal of your property. Dirt and hard water deposits can 
+                                wear down your surfaces over time, leaving lasting damage and leading to reduced value.
+                                The trained technicians at High Tide use specialized tools and eco-friendly cleaning solutions to remove stubborn dirt, 
+                                grime, streaks, and hard water stains from your windows, concrete, and other exterior surfaces. 
+                                Say goodbye to smudges, fingerprints, hard-to-reach dirt, and built-up grime on your pathways, porches and driveways. 
+                                Make your solar panels shine again, potentially increasing efficiency and reducing wear.
+                            </p>
+                            <p>
+                                Call us now at 916-303-6726 to schedule an appointment for a free assessment and estimate.
+                            </p>
+                        </div>
+                        <div class="vertical-space left-center">
+                            <a class="phone-button" href="tel:916-303-6726">Call now!</a>
+                        </div>
+                    </div>
+                </section>
+                <section id="window-cleaning" class="row">
+                    <div class="section-text">
+                        <div class="intro-title subtitle">Window Cleaning</div>
+                        <div>
+                            <p>
+                                Dirt and hard water deposits can wear your windows down, leaving dingy views.
+                                Our technicians use eco-friendly water filtration solutions to remove dirt without
+                                leaving hard water stains or streaks on your windows. Crystal clear glass and clean screens 
+                                allow natural light to flood in!
+                            </p>
+                            <div class="content-callout">
+                                <p>Swipe over the examples below to see the difference!</p>
+                                <div>
+                                    <canvas id="sill-canvas" width=300 height=300 data-after="images/photos/sill-after.jpg"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section-image section-image--windows"></div>
+                </section>
+                <section id="pressure-washing" class="row">
+                    <div class="section-image section-image--pressure"></div>
+                    <div class="section-text">
+                        <div class="intro-title subtitle">Pressure Washing</div>
+                        <div>
+                            <p>
+                                Clear away hard-to-reach dirt, grime and dingy stains from your pathways, porches and driveways. 
+                                We can clean off all of your hard surfaces, leaving pristine concrete and stone 
+                                without rinsing harsh chemicals into your landscaping.
+                            </p>
+                            <div class="content-callout">
+                                <p>Swipe over the examples below to see how great your concrete can look!</p>
+                                <div>
+                                    <canvas id="deck-canvas" width=300 height=300 data-after="images/photos/deck-after.jpg"></canvas>
+                                </div>
+                                <div class="vertical-space">
+                                    <canvas id="stairs-canvas" width=300 height=300 data-after="images/photos/stairs-after.jpg"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="solar-panels" class="row">
+                    <div class="section-text">
+                        <div class="intro-title subtitle">Solar Panels</div>
+                        <div>
+                            <p>
+                                Solar panels can offer a great alternative power source for your home, if the sun can get to them. 
+                                Over time, dirt and dust can cover your panels, reducing their effectiveness and affecting 
+                                the useful life of your investment. Our specialized equipment will clean your panels 
+                                without scratching or leaving behind residue, allowing you to make the most of the sunshine!
+                            </p>
+                            <p>
+                                Call us now at 916-303-6726 for a free quote.
+                            </p>
+                        </div>
+                        <div class="vertical-space left-center">
+                            <a class="phone-button" href="tel:916-303-6726">Call now!</a>
+                        </div>
+                    </div>
+                    <div class="section-image section-image--solar"></div>
+                </section>
+                <section id="roofs-gutters" class="row">
+                    <div class="section-image section-image--roofs"></div>
+                    <div class="section-text">
+                        <div class="intro-title subtitle">Roofs and Gutters</div>
+                        <div>
+                            <p>
+                                Leaves, twigs, dirt and debris can build up on your roofs and gutters, 
+                                clogging your drainage or even damaging your roof. Keep those water sheds 
+                                clean and flowing with a full cleaning!
+                            </p>
+                            <div class="content-callout">
+                                <p>Take a look at the difference a clean roof can make.</p>
+                                <div>
+                                    <canvas id="roof-canvas" width=300 height=300 data-after="images/photos/roof-after.jpg"></canvas>
+                                </div>
+                                <div class="vertical-space">
+                                    <canvas id="awning-canvas" width=300 height=300 data-after="images/photos/awning-after.jpg"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="footer" class="footer">
+                    <div class="column">
+                        <div>&copy; High Tide Cleaning Services, LLC </div>
+                        <div><a href="tel:916-303-6726">(916) 303-6726</a></div>
+                    </div>
+                    <div class="social social-footer">
+                        <div class="social-button social-facebook hidden"><a href="https://www.facebook.com" target="_blank" rel="noopener"></a></div>
+                        <div class="social-button social-instagram"><a href="https://www.instagram.com/hightidewashingllc/" target="_blank" rel="noopener"></a></div>
+                        <div class="social-button social-in hidden"><a href="https://www.linkedin.com" target="_blank" rel="noopener"></a></div>
+                        <div class="social-button social-google hidden"><a href="https://www.google.com" target="_blank" rel="noopener"></a></div>
+                        <div class="social-button social-email"><a href="mailto:hightidecleans@outlook.com" target="_blank" rel="noopener"></a></div>
+                    </div>
+                </section>
+            </div>
         </section>
     </body>
+
+    <script src="js/image-wipe.js"></script>
+    <script src="js/toggle.js"></script>
 </html>
