@@ -2,9 +2,14 @@
     display: flex;
     flex-grow: 1
 }
+.social-footer {
+    text-align: center;
+    justify-content: center;
+    padding-top: 1rem;
+}
 .social .social-button {
-    height: 1.5rem;
-    width: 1.5rem;
+    height: 1.25rem;
+    width: 1.25rem;
     padding-right: .5rem;
     cursor: pointer;
     margin: 0;
@@ -25,11 +30,15 @@
 .social-button:hover {
     box-shadow: .125rem .125rem .5rem rgba(0,0,0,.5);
 }
+.social-footer .social-button:hover {
+    box-shadow: none;
+}
 .social-facebook {
     background-image: url("../images/social-facebook.svg");
     background-size: contain;
     background-repeat: no-repeat;
 }
+.social-footer .social-facebook,
 .social-facebook:hover {
     background-image: url("../images/social-facebook-h.svg");
 }
@@ -38,15 +47,16 @@
     background-size: contain;
     background-repeat: no-repeat;
 }
+.social-footer .social-instagram,
 .social-instagram:hover {
     background-image: url("../images/social-instagram-h.svg");
-
 }
 .social-in {
     background-image: url("../images/social-in.svg");
     background-size: contain;
     background-repeat: no-repeat;
 }
+.social-footer .social-in,
 .social-in:hover {
     background-image: url("../images/social-in-h.svg");
 }
@@ -55,6 +65,7 @@
     background-size: contain;
     background-repeat: no-repeat;
 }
+.social-footer .social-google,
 .social-google:hover {
     background-image: url("../images/social-google-h.svg");
 }
@@ -63,6 +74,7 @@
     background-size: contain;
     background-repeat: no-repeat;
 }
+.social-footer .social-email,
 .social-email:hover {
     background-image: url("../images/social-email-h.svg");
 }

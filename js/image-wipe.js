@@ -16,4 +16,8 @@ function wipeImage(e, element, context, image) {
     context.drawImage(image, 0, 0, x, element.height,  0, 0, x, element.height);
     context.fillStyle = '#1278b1';
     context.fillRect(x, 0, 3, element.height);
+    context.beginPath();
+    context.arc(x + 1, 0, 6, 0, 2 * Math.PI);
+    context.arc(x + 1, element.height, 6, 0, 2 * Math.PI);
+    context.fill();
 };

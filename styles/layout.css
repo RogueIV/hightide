@@ -94,6 +94,12 @@ body {
     background: #ffffff;
 }
 
+.footer {
+    padding: 1rem 0;
+    text-align: center;
+    justify-content: center;
+}
+
 @media only screen and (max-width: 620px){
     body {
         height: auto;
@@ -127,5 +133,25 @@ body {
     }
     .menu-right .menu-right__toggle {
         display: block;
+    }
+    .section-image {
+        display: none;
+    }
+    .intro-title {
+        font-size: 10vw;
+        text-align: center;
+    }
+    .subtitle {
+        font-size: 7vw;
+    }
+    .left-center,
+    .right-center {
+        text-align: center;
+    }
+    .section-text {
+        margin: 0;
+    }
+    section.row {
+        margin: 2rem 0;
     }
 }

@@ -1,6 +1,6 @@
 #deck-canvas {
     background: url('../images/photos/deck-before.jpg'); 
-    background-size: cover;
+    background-size: contain;
 }
 #roof-canvas {
     background: url('../images/photos/roof-before.jpg'); 
@@ -16,5 +16,5 @@
 }
 #sill-canvas {
     background: url('../images/photos/sill-before.jpg'); 
-    background-size: cover;
+    background-size: contain;
 }
