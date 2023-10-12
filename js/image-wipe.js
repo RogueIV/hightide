@@ -6,6 +6,8 @@ const canvasElements = document.getElementsByTagName('canvas');
     canvasImage.onload = () => {
         canvasElement.onmousemove = (e) => wipeImage(e, canvasElement, canvasContext, canvasImage);
         canvasElement.ontouchmove = (e) => wipeImage(e, canvasElement, canvasContext, canvasImage);
+        canvasElement.ontouchstart = (e) => wipeImage(e, canvasElement, canvasContext, canvasImage);
+        canvasElement.ontouchend = (e) => wipeImage(e, canvasElement, canvasContext, canvasImage);
     };
 });
 
