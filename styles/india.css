@@ -1,0 +1,147 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: radial-gradient(#0d3626, #000);
+    color: #efefef;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 480px;
+    background: #000;
+    margin: 24px 0;
+    padding: 24px 18px 32px 18px;
+    border-radius: 18px;
+    box-shadow: 0 6px 32px rgba(0,0,0,0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid rgb(211, 183, 133);
+    position: relative;
+  }
+
+  .hero-image {
+    width: 100%;
+    height: 280px;
+    max-height: 40vw;
+    border-radius: 14px;
+    object-fit: cover;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+    color: #666;
+    border: 1px solid #000;
+    opacity: 1;
+  }
+
+  .hero-image.hide {
+    opacity: 1;
+  }
+
+  .hero-image.fade-out {
+    opacity: 0;
+    transition: opacity .8s ease-in;
+  }
+  .hero-image.fade-in {
+    opacity: 1;
+    transition: opacity .8s ease-in;
+  }
+
+  h1 {
+    font-size: 2.5em;
+    margin: 0 0 10px 0;
+    letter-spacing: 1px;
+    color: rgb(211, 183, 133);
+  }
+  h2 {
+    font-size: .875em;
+    margin: 15px 0 2px 0;
+    letter-spacing: 2px;
+    color: rgb(211, 183, 133);
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  .grad-info {
+    text-align: center;
+  }
+  .school-info {
+    font-size: 1.75em;
+    color: #fff;
+    text-align: center;
+  }
+
+  .details {
+    font-size: 1em;
+    color: #efefef;
+    line-height: 1.4;
+    margin-bottom: 30px;
+  }
+
+  .details.narrow {
+    padding-left: 25%;
+    padding-right: 25%;
+  }
+
+  .qr-section {
+    margin-top: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .qr-label {
+    font-size: 0.98em;
+    margin-bottom: 8px;
+    color: rgb(211, 183, 133);
+    text-align: center;
+  }
+  .qr-image {
+    width: 140px;
+    height: 140px;
+    background: #fff;
+    border-radius: 12px;
+    object-fit: contain;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  a {
+    text-decoration: none;
+    color: #efefef;
+    font-weight: bold;
+  }
+
+  .school-img {
+    width: 5vw;
+    position: absolute;
+  }
+  .school-img.img-left {
+    left: 16px;
+  }
+  .school-img.img-right {
+    right: 16px;
+  }
+
+  @media (max-width: 600px) {
+    .container {
+      max-width: 98vw;
+      padding: 10vw 3vw 16vw 3vw;
+      margin: 8vw 0;
+    }
+    .hero-image {
+      height: 36vw;
+    }
+    h1 {
+      font-size: 1.45em;
+    }
+    .qr-image {
+      width: 34vw;
+      height: 34vw;
+    }
+  }
