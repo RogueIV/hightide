@@ -10,8 +10,8 @@ const photos = [
   ];
   let index = 0;
   const img = document.getElementById('heroImage');
-  const FADE_DURATION = 800; // ms
-  const DISPLAY_DURATION = 8000; // ms
+  const FADE_DURATION = 500; // ms
+  const DISPLAY_DURATION = 5000; // ms
 
   function showNextPhoto() {
     // Fade out
