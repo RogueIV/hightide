@@ -1,8 +1,11 @@
 const photos = [
+    "images/india/flowers.jpg",
     "images/india/grad.jpg",
     "images/india/toddler.jpg",
+    "images/india/wall.jpg",
     "images/india/pink-headband.jpg",
     "images/india/reclining.jpg",
+    "images/india/pink-door.jpg",
     "images/india/airplane.jpg"
   ];
   let index = 0;
