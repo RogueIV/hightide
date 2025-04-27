@@ -27,7 +27,6 @@ body {
   .hero-image {
     width: 100%;
     height: 280px;
-    max-height: 40vw;
     border-radius: 14px;
     object-fit: cover;
     margin-bottom: 24px;
@@ -118,30 +117,28 @@ body {
   }
 
   .school-img {
-    width: 5vw;
+    width: 4.5rem;
     position: absolute;
   }
   .school-img.img-left {
-    left: 16px;
+    left: 1rem;
   }
   .school-img.img-right {
-    right: 16px;
+    right: 1rem;
   }
 
   @media (max-width: 600px) {
     .container {
-      max-width: 98vw;
-      padding: 10vw 3vw 16vw 3vw;
-      margin: 8vw 0;
-    }
-    .hero-image {
-      height: 36vw;
+      padding: 0;
+      border: none;
+      box-shadow: none;
+      margin-top: 0px;
     }
     h1 {
-      font-size: 1.45em;
+      font-size: 2em;
     }
     .qr-image {
-      width: 34vw;
-      height: 34vw;
+      width: 36vw;
+      height: 36vw;
     }
   }
