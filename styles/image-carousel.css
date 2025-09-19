@@ -1,0 +1,57 @@
+.section-carousel .img {
+    position: absolute; 
+    inset: 0;
+    height: 34rem;
+    object-fit: cover; 
+    display: block;
+    opacity: 1;
+}
+.section-carousel .cover {
+    position: absolute; 
+    top: 0; 
+    bottom: 0; 
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    will-change: width;
+    display: block;
+}
+.section-carousel {
+    font-family: 'Futura, Arial';
+    font-weight: 600;
+    color: rgba(255,255,255,.75);
+    height: 32rem;
+    width: 100%;
+    border: 1px solid #000;
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+    max-width: 25.5rem
+}
+
+@keyframes wipe-rtl {
+  from { width: 100%; }
+  to   { width: 0%; }
+}
+.section-carousel .cover.animate-wipe {
+  animation: wipe-rtl var(--dur, 800ms) ease-in-out forwards;
+}
+
+@keyframes fade {
+  from { opacity: 1; }
+  to   { opacity: 0; }
+}
+.section-carousel .cover.animate-fade {
+  animation: fade var(--dur, 800ms) ease-in-out forwards;
+}
+
+@media only screen and (max-width: 840px){
+  #services {
+      flex-direction: column;
+  }
+  .section-carousel {
+      width: 100%;
+      height: 28rem;
+      align-self: center
+  }
+}
