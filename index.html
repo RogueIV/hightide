@@ -19,8 +19,9 @@
         <link rel="stylesheet" href="styles/common.css">
         <link rel="stylesheet" href="styles/layout.css">
         <link rel="stylesheet" href="styles/social.css">
-        <link rel="stylesheet" href="styles/image-wipe.css">
         <link rel="stylesheet" href="styles/waves.css">
+        <link rel="stylesheet" href="styles/image-carousel.css">
+        <link rel="stylesheet" href="styles/reviews.css">
     </head>
     <body>
         <section class="page-contact">
@@ -42,10 +43,9 @@
                     <div></div>
                 </div>
                 <ul id="menu-list" class="menu-right__list">
-                    <li><a href="#window-cleaning" onclick="toggleMenu()">Window cleaning</a></li>
-                    <li><a href="#pressure-washing" onclick="toggleMenu()">Pressure washing</a></li>
-                    <li><a href="#solar-panels" onclick="toggleMenu()">Solar panels</a></li>
-                    <li><a href="#roofs-gutters" onclick="toggleMenu()">Roofs and gutters</a></li>
+                    <li><a href="index.html" class="selected" onclick="toggleMenu()">Services</a></li>
+                    <li><a href="meet.html" onclick="toggleMenu()">Meet the Team</a></li>
+                    <li><a href="contact.html" onclick="toggleMenu()">Contact Us</a></li>
                 </ul>
             </div>
         </section>
@@ -63,112 +63,40 @@
             </svg>
         </div>
         <section class="page-body">
-            <div class="message-coming-soon">
-                <h1>Coming Soon</h1>
-                <p>Web marketing is hard. We are <strong class="text-emphasis">way better</strong> at washing stuff!</p>
-                <p>While we are still getting set up, please checkout out our instagram page</p>
-                <p><a href="https://www.instagram.com/hightidewashingllc/" target="_blank" rel="noopener">www.instagram.com/hightidewashingllc/</a></p>
-                <p>Or give us a call at <a href="tel:916-303-6726">(916) 303-6726</a></p>
-            </div>
             <div class="flex-grow">
-                <section id="intro" class="row">
-                    <div class="section-image"></div>
+                <section id="services" class="row">
+                    <div id="section-carousel" class="section-carousel">
+                        <img class="img bottom" src="images/jobs/driveway.jpg" alt="High Tide">
+                        <div class="cover">
+                            <img class="img top" src="images/jobs/working.jpg" alt="High Tide">
+                        </div>
+                    </div>
                     <div class="section-text">
                         <div class="intro-title">Professional Exterior Cleaning</div>
                         <div>
                             <p>
-                                When it comes to maintaining the sparkling appearance of your home, professional cleaning services are a game-changer. 
-                                The benefits go beyond just enhancing the aesthetic appeal of your property. Dirt and hard water deposits can 
-                                wear down your surfaces over time, leaving lasting damage and leading to reduced value.
-                                The trained technicians at High Tide use specialized tools and eco-friendly cleaning solutions to remove stubborn dirt, 
-                                grime, streaks, and hard water stains from your windows, concrete, and other exterior surfaces. 
-                                Say goodbye to smudges, fingerprints, hard-to-reach dirt, and built-up grime on your pathways, porches and driveways. 
-                                Make your solar panels shine again, potentially increasing efficiency and reducing wear.
+                                High Tide Washing Services is your go-to provider for professional exterior cleaning in the greater Sacramento area.
                             </p>
+                            <ul class="services-list">
+                                <li>Window Cleaning</li>
+                                <li>Pressure Washing</li>
+                                <li>Solar Panel Cleaning</li>
+                                <li>Roof and Gutter Cleaning</li>
+                            </ul>
                             <p>
+                                Our team is dedicated to providing top-notch service with a focus on quality and customer satisfaction.
                                 Call us now at 916-303-6726 to schedule an appointment for a free assessment and estimate.
                             </p>
                         </div>
-                        <div class="vertical-space left-center">
-                            <a class="phone-button" href="tel:916-303-6726">Call now!</a>
+                        <div class="vertical-space left-center wrap-container">
+                            <a class="phone-button--new button-space" href="tel:916-303-6726">Call now!</a>
+                            <a class="request-button button-space" href="contact.html">Request a Quote</a>
                         </div>
-                    </div>
-                </section>
-                <section id="window-cleaning" class="row mobile-column">
-                    <div class="section-text">
-                        <div class="intro-title subtitle">Window Cleaning</div>
-                        <div>
-                            <p>
-                                Dirt and hard water deposits can wear your windows down, leaving dingy views.
-                                Our technicians use eco-friendly water filtration solutions to remove dirt without
-                                leaving hard water stains or streaks on your windows. Crystal clear glass and clean screens 
-                                allow natural light to flood in!
-                            </p>
-                        </div>
-                    </div>
-                    <div class="section-image section-image--windows"></div>
-                </section>
-                <section id="pressure-washing" class="row">
-                    <div class="section-image section-image--pressure"></div>
-                    <div class="section-text">
-                        <div class="intro-title subtitle">Pressure Washing</div>
-                        <div>
-                            <p>
-                                Clear away hard-to-reach dirt, grime and dingy stains from your pathways, porches and driveways. 
-                                We can clean off all of your hard surfaces, leaving pristine concrete and stone 
-                                without rinsing harsh chemicals into your landscaping.
-                            </p>
-                            <div class="content-callout">
-                                <p>Swipe over the examples below to see how great your concrete can look!</p>
-                                <div>
-                                    <canvas id="deck-canvas" width=300 height=300 data-after="images/photos/deck-after.jpg"></canvas>
-                                </div>
-                                <div class="vertical-space">
-                                    <canvas id="stairs-canvas" width=300 height=300 data-after="images/photos/stairs-after.jpg"></canvas>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section id="solar-panels" class="row mobile-column">
-                    <div class="section-text">
-                        <div class="intro-title subtitle">Solar Panels</div>
-                        <div>
-                            <p>
-                                Solar panels can offer a great alternative power source for your home, if the sun can get to them. 
-                                Over time, dirt and dust can cover your panels, reducing their effectiveness and affecting 
-                                the useful life of your investment. Our specialized equipment will clean your panels 
-                                without scratching or leaving behind residue, allowing you to make the most of the sunshine!
-                            </p>
-                            <p>
-                                Call us now at 916-303-6726 for a free quote.
-                            </p>
-                        </div>
-                        <div class="vertical-space left-center hide-mobile">
-                            <a class="phone-button" href="tel:916-303-6726">Call now!</a>
-                        </div>
-                    </div>
-                    <div class="section-image section-image--solar"></div>
-                </section>
-                <section id="roofs-gutters" class="row">
-                    <div class="section-image section-image--roofs"></div>
-                    <div class="section-text">
-                        <div class="intro-title subtitle">Roofs and Gutters</div>
-                        <div>
-                            <p>
-                                Leaves, twigs, dirt and debris can build up on your roofs and gutters, 
-                                clogging your drainage or even damaging your roof. Keep those water sheds 
-                                clean and flowing with a full cleaning!
-                            </p>
-                            <div class="content-callout">
-                                <p>Take a look at the difference a clean roof can make.</p>
-                                <div>
-                                    <canvas id="roof-canvas" width=300 height=300 data-after="images/photos/roof-after.jpg"></canvas>
-                                </div>
-                                <div class="vertical-space">
-                                    <canvas id="awning-canvas" width=300 height=300 data-after="images/photos/awning-after.jpg"></canvas>
-                                </div>
-                            </div>
+
+                        <a id="review-container" class="review-container" href="https://maps.app.goo.gl/dHgz3cjtwhm6EfU89" target="_blank" rel="noopener"></a>
+
+                        <div class="review-powered">
+                            <a href="https://maps.app.goo.gl/dHgz3cjtwhm6EfU89" target="_blank" rel="noopener">Powered by Google Places</a>
                         </div>
                     </div>
                 </section>
@@ -188,7 +116,7 @@
             </div>
         </section>
     </body>
-
-    <script src="js/image-wipe.js"></script>
     <script src="js/toggle.js"></script>
+    <script src="js/image-carousel.js"></script>
+    <script src="js/review-snippet.js"></script>
 </html>

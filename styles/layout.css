@@ -93,6 +93,10 @@ body {
 .menu-right__toggle:hover > div {
     background: #ffffff;
 }
+.menu-right__list > li > a.selected {
+    font-weight: 600;
+    color: #ffffff
+}
 
 .footer {
     padding: 1rem 0;
